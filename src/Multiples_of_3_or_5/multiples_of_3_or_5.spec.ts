@@ -1,4 +1,4 @@
-import { multiples_of_3_or_5 } from "./multiples_of_3_or_5";
+import { sumOfMultiple3or5 } from "./sum_of_multiple3or5";
 
 describe('multiples_of_3_or_5', () => {
 
@@ -8,7 +8,7 @@ describe('multiples_of_3_or_5', () => {
         const expected = inputNumber;
 
         // Arrange
-        const result = multiples_of_3_or_5([inputNumber])
+        const result = sumOfMultiple3or5(inputNumber)
 
         // Assert
         expect(result).toBe(expected)
@@ -20,7 +20,7 @@ describe('multiples_of_3_or_5', () => {
         const expected = inputNumber;
 
         // Arrange
-        const result = multiples_of_3_or_5([inputNumber])
+        const result = sumOfMultiple3or5(inputNumber)
 
         // Assert
         expect(result).toBe(expected)
@@ -32,7 +32,7 @@ describe('multiples_of_3_or_5', () => {
         const expected = inputNumber;
 
         // Arrange
-        const result = multiples_of_3_or_5([inputNumber])
+        const result = sumOfMultiple3or5(inputNumber)
 
         // Assert
         expect(result).toBe(expected)
@@ -44,22 +44,34 @@ describe('multiples_of_3_or_5', () => {
         const expected = 0
 
         // Arrange
-        const result = multiples_of_3_or_5([inputNumber])
+        const result = sumOfMultiple3or5(inputNumber)
 
         // Assert
         expect(result).toBe(expected)
     });
 
-    test('should return sum all number of list is multiple of 3', () => {
-        // Act
-        const inputNumber = [3,1,9,6,4];
-        const expected = 18;
+    // test('should return sum all number of list is multiple of 3', () => {
+    //     // Act
+    //     const inputNumber = [3,1,9,6,4];
+    //     const expected = 18;
+    //
+    //     // Arrange
+    //     const result = sumOfMultiple3or5(inputNumber)
+    //
+    //     // Assert
+    //     expect(result).toBe(expected)
+    // });
 
-        // Arrange
-        const result = multiples_of_3_or_5(inputNumber)
-
-        // Assert
-        expect(result).toBe(expected)
-    });
+    // test('should return sum of 23 for sum multiple < 10', () => {
+    //     // Act
+    //     const inputNumber = 10
+    //     const expected = 23;
+    //
+    //     // Arrange
+    //     const result = sumOfMultiple3or5([inputNumber])
+    //
+    //     // Assert
+    //     expect(result).toBe(expected)
+    // });
 
 });
