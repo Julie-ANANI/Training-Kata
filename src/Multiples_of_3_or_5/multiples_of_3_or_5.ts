@@ -7,11 +7,18 @@
 
 //Remarque : si le nombre est un multiple de 3 et de 5, ne le comptez qu'une seule fois.
 
-export function multiples_of_3_or_5 (number:number) {
+export function multiples_of_3_or_5 (numbers:Array<number>) {
 
-   if((number % 5) === 0 || (number % 3) === 0 || ((number % 3) === 0) &&  (number % 5) === 0){
-      return  number;
-   } else if (number <= 0){
-      return 0
-   }
+   let result = 0;
+   numbers.map(number => {
+      if ((number % 5) === 0 || (number % 3) === 0 || ((number % 3) === 0) && (number % 5) === 0) {
+         result = number;
+         return result;
+      } else if (number <= 0) {
+         result = 0
+         return result;
+      }
+   })
+
+   return result
 }
