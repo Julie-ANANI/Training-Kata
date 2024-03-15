@@ -25,4 +25,16 @@ describe('multiples_of_3_or_5', () => {
         // Assert
         expect(result).toBe(expected)
     });
+
+    test('should return 0 if the input is negatif', () => {
+        // Act
+        const inputNumber = -2
+        const expected = 0
+
+        // Arrange
+        const result = multiples_of_3_or_5(inputNumber)
+
+        // Assert
+        expect(result).toBe(expected)
+    });
 });
