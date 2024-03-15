@@ -14,7 +14,7 @@ export function multiples_of_3_or_5(number :number) {
    }
 
    if((number % 3) === 0){
-      return 3;
+      return number;
    }
 
    if((number % 5) === 0){
