@@ -6,16 +6,20 @@
 
 export function sumOfMultiple3or5 (number) {
    let result = 0;
-   const isMultipleOf3 =  3
-   const isMultipleOf5 = 5
+   const multipleOf3 =  3
+   const multipleOf5 = 5
+   let isMultipleOf5 = false
+   let isMultipleOf3 = false
 
-   //increment tableau of number
    if(number > 0){
       const compareValue = new Array(number -1).fill(0).map((x, i) => i +1);
-
       compareValue.map(number => {
+         isMultipleOf3 = false;
+         isMultipleOf5 = false;
+         ((number % multipleOf3) === 0) ? isMultipleOf3 = true : false;
+         ((number % multipleOf5) === 0) ? isMultipleOf5 = true : false;
 
-         if ((number % isMultipleOf5) === 0 || (number % isMultipleOf3) === 0 || ((number % isMultipleOf3) === 0) && (number % isMultipleOf5) === 0) {
+         if (isMultipleOf3 && isMultipleOf5 || !isMultipleOf5 && isMultipleOf3 || isMultipleOf5 && !isMultipleOf3) {
             (!result)? result = number : result = result + number;
          } else if (number <= 0) {
             return result;
