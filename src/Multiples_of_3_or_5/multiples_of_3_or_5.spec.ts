@@ -50,16 +50,16 @@ describe('multiples_of_3_or_5', () => {
         expect(result).toBe(expected)
     });
 
-    // test('should return sum all number of list is multiple of 3', () => {
-    //     // Act
-    //     const inputNumber = [3,1,9,6,4];
-    //     const expected = 16;
-    //
-    //     // Arrange
-    //     const result = multiples_of_3_or_5(inputNumber)
-    //
-    //     // Assert
-    //     expect(result).toBe(expected)
-    // });
+    test('should return sum all number of list is multiple of 3', () => {
+        // Act
+        const inputNumber = [3,1,9,6,4];
+        const expected = 18;
+
+        // Arrange
+        const result = multiples_of_3_or_5(inputNumber)
+
+        // Assert
+        expect(result).toBe(expected)
+    });
 
 });

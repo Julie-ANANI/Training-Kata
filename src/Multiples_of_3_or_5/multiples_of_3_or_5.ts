@@ -12,10 +12,14 @@ export function multiples_of_3_or_5 (numbers:Array<number>) {
    let result = 0;
    numbers.map(number => {
       if ((number % 5) === 0 || (number % 3) === 0 || ((number % 3) === 0) && (number % 5) === 0) {
-         result = number;
-         return result;
+        // result = ++number
+         if(!result){
+            result = number;
+         }else{
+            result = result + number;
+         }
       } else if (number <= 0) {
-         result = 0
+         result = result + 0;
          return result;
       }
    })
