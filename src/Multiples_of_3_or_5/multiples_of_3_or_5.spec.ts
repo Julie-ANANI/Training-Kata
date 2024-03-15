@@ -13,4 +13,16 @@ describe('multiples_of_3_or_5', () => {
         // Assert
         expect(result).toBe(expected)
     });
+
+    test('should return the multiple 5 if the input is multiple of 5', () => {
+        // Act
+        const inputNumber = 10
+        const expected = 5
+
+        // Arrange
+        const result = multiples_of_3_or_5(inputNumber)
+
+        // Assert
+        expect(result).toBe(expected)
+    });
 });
