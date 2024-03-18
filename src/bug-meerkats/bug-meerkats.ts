@@ -1,7 +1,13 @@
 export function fixTheMeerkat(arr: string[]) {
-    if(arr.length > 2) {
-      const elMove = arr.splice(2, 1)[0];
-      arr.unshift(elMove);
-      return arr;
+  const result = arr;
+  arr.forEach(( el, idx) => {
+    console.log(idx, el);
+    if(idx === 2){
+      const elMove = result.splice(2, 1)[0];
+      result.unshift(elMove);
+      return result;
     }
+  });
+  arr = result;
+  return arr;
 }
