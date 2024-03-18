@@ -50,4 +50,15 @@ describe('bug-meerkats', () => {
         expect(result[2]).toBe(expected);
     });
 
+    test('should return middle always second idx is el equal to middle', () => {
+        // Act
+        const input = ['body', 'tails', 'middle'];
+        const expected = 'middle';
+
+        // Arrange
+        const result = fixTheMeerkat(input);
+
+        // Assert
+        expect(result[1]).toBe(expected);
+    });
 });
