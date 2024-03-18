@@ -28,7 +28,7 @@ describe('bug-meerkats', () => {
 
     test('should return body always second idx is el equal to body', () => {
         // Act
-        const input = ['body', 'head', 'tail'];
+        const input = ['tail', 'body', 'head'];
         const expected =  'tail';
 
         // Arrange

@@ -1,29 +1,17 @@
 export function fixTheMeerkat(arr: string[]) {
-  const first = 'head';
-  const second = 'body';
-  const third = 'tail';
   const result = arr;
-  arr.forEach(( el, idx) => {
-    if(el === first){
-      const elMove = result.splice(idx, 1)[0];
-      result.unshift(elMove);
-      return result;
-    }
+  const tabCompare = [
+    {value : 'head', idx : 1},
+    {value : 'body', idx : 2},
+    {value : 'tail', idx : 3}
+  ]
+  const getIndexForValue = (value: string) => {
+    const item = tabCompare.find(item => item.value === value);
+    return item ? item.idx : -1;
+  };
 
-    if(el === second){
-      const elMove = result.splice(idx, 1)[0];
-      //result.unshift(elMove);
-      result.splice(1, 0, elMove);
-      return result;
-    }
-
-    if(el === third){
-      const elMove = result.splice(idx, 1)[0];
-      result.push(elMove);
-      return result;
-    }
-
+  result.sort((a, b) => {
+    return getIndexForValue(a) - getIndexForValue(b);
   });
-  arr = result;
-  return arr;
+  return result;
 }
